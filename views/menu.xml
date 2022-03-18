@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+  <data>
+    <!-- This Menu Item will appear in the Upper bar, that's why It needs NO parent or action -->
+    <menuitem
+      id="booking_menu"
+      name="Booking"
+      parent="sales_team.menu_base_partner"
+      sequence="5"
+    />
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem
+      id="booking_order_main"
+      name="Booking Order"
+      parent="booking_menu"
+      action="booking_order_action"
+      sequence="1"
+    />
+    <menuitem 
+      name="Work Order" 
+      id="work_order_main"
+      parent="booking_menu" 
+      sequence="2" 
+      action="work_order_action"
+    />
+    <menuitem
+      id="service_team_main"
+      name="Service team"
+      parent="booking_menu"
+      action="service_team_action"
+      sequence="3"
+    />
+  </data>
+</odoo>
